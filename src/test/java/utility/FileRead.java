@@ -33,5 +33,9 @@ public class FileRead {
 		return propObj.getProperty(value);
 		
 	}
+	
+	
+	
+	
 
 }

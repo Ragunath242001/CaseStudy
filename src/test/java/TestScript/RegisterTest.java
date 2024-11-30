@@ -8,6 +8,18 @@ import page.RegisterPage;
 public class RegisterTest extends driverSetUp {
 
 	RegisterPage obj;
+	
+	
+	@BeforeMethod
+	public void browserSetUp() {
+		setUpBrowser("config", "url");
+		
+	}
+	
+	@AfterTest
+	public void browserClose() {
+		tearDownBrowser();
+	}
 
 	@Test
 	public void inputBox() {
@@ -19,5 +31,6 @@ public class RegisterTest extends driverSetUp {
 		obj.selectSkill("CSS");
 
 	}
-
+	
+	
 }

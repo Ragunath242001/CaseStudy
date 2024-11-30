@@ -15,15 +15,14 @@ public class driverSetUp {
 
 	public static WebDriver driver;
 
-	@BeforeTest
-	public void setUpBrowser() {
+	public void setUpBrowser(String filename , String url) {
 
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
-		driver.get(FileRead.propertiesFileRead("config", "url"));
+		driver.get(FileRead.propertiesFileRead(filename, url));
 	}
 
-	@AfterTest
+	
 	public void tearDownBrowser() {
 		// driver.close();
 	}
